@@ -19,7 +19,9 @@ mongoose
     .then(() => console.log("Connected to MongoDB"))
     .catch((err) => console.error("Could not connect to MongoDB", err));
 
-
+app.get("/", (req, res) => {
+    res.send("Backend server is running");
+})
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`)
